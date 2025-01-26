@@ -11,7 +11,7 @@ def bin_to_ascii_char(binary):
 def bin_to_ascii(binary):
     # buffer to store the ascii representation
     ascii = ""
-    # split the binary representation into 7-bit chunks
+    # split the binary representation into 8-bit chunks
     chars = binary.split(" ")
     for char in chars:
         ascii += bin_to_ascii_char(char)
