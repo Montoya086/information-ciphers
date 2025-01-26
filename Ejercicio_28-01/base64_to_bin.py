@@ -1,11 +1,14 @@
 import sys
 import complete_bin
+special = "0123456789+/"
 
 def base64_to_bin_char(base64):
     # get the ascii code of the character
     pos = ord(base64)
     pos -= 65 # set it to 0 in base64
     # buffer to store the binary representation
+    if base64 in special: # handle the special characters
+        pos = special.index(base64) + 52
     if pos < 0 or pos > 63:
         Exception("Invalid character")
     binary = ""
