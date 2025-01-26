@@ -10,7 +10,7 @@ def base64_to_bin_char(base64):
     if base64 in special: # handle the special characters
         pos = special.index(base64) + 52
     if pos < 0 or pos > 63:
-        raise Exception("Invalid character")
+        raise Exception("Invalid character", base64)
     binary = ""
     # convert the ascii code to binary
     while pos > 0:
@@ -31,6 +31,6 @@ def base64_to_bin(base64):
     return binary
 
 if __name__ == "__main__":
-    arg = sys.argv[1]
+    arg = "SGVsbG8+/"
     res = base64_to_bin(arg)
     print('The binary representation of the base64 code of "'+ arg + '" is', res)

@@ -26,6 +26,6 @@ def ascii_to_bin(ascii):
 
 
 if __name__ == "__main__":
-    arg = sys.argv[1]
+    arg = "Hello!!"
     res = ascii_to_bin(arg)
     print('The binary representation of the ASCII code of "'+ arg + '" is', res)

@@ -1,5 +1,3 @@
-import sys
-
 def bin_to_base64_char(binary):
     # get the integer representation of the binary code
     pos = 0
@@ -23,13 +21,6 @@ def bin_to_base64(binary):
     return base64
 
 if __name__ == "__main__":
-    arg = sys.argv[1:]
-    bin = ""
-    if len(arg) > 1:
-        for a in arg:
-            bin += a + " "
-    else:
-        bin = arg[0]
-    
-    res = bin_to_base64(bin.strip())
+    bin = "00000000 00000001"
+    res = bin_to_base64(bin)
     print('The base64 code of the binary representation "'+ bin + '" is', res)

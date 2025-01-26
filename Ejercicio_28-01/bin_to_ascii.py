@@ -19,13 +19,6 @@ def bin_to_ascii(binary):
     return ascii
 
 if __name__ == "__main__":
-    arg = sys.argv[1:]
-    bin = ""
-    if len(arg) > 1:
-        for a in arg:
-            bin += a + " "
-    else:
-        bin = arg[0]
-    
-    res = bin_to_ascii(bin.strip())
+    bin = "01001000 01100101 01101100 01101100 01101111"
+    res = bin_to_ascii(bin)
     print('The ascii code of the binary representation "'+ bin + '" is', res)
