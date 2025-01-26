@@ -4,7 +4,7 @@ def complete_bin(binary):
     # get the length of the binary representation
     length = len(binary)
     # calculate the number of 0's to add
-    zeros = 6 - length
+    zeros = 8 - length
     # add the 0's to the left
     for _ in range(zeros):
         binary = "0" + binary

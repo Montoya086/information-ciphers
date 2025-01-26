@@ -11,7 +11,7 @@ def bin_to_base64_char(binary):
 def bin_to_base64(binary):
     # buffer to store the base64 representation
     base64 = ""
-    # split the binary representation into 6-bit chunks
+    # split the binary representation into 8-bit chunks
     chars = binary.split(" ")
     for char in chars:
         base64 += bin_to_base64_char(char)
