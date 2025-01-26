@@ -22,7 +22,7 @@ def ascii_to_bin(ascii):
     for char in ascii:
         # get the binary representation of the character
         binary += ascii_to_bin_char(char) + " "
-    return binary
+    return binary.strip()
 
 
 if __name__ == "__main__":
