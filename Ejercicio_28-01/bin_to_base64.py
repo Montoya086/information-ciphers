@@ -2,7 +2,11 @@ import sys
 
 def bin_to_base64_char(binary):
     # get the integer representation of the binary code
-    pos = int(binary, 2)
+    pos = 0
+    for i in range(len(binary)):
+        # get the integer representation of the binary code, converting it to decimal
+        pos += int(binary[i]) * 2**(len(binary)-i-1)
+    
     pos += 65 # set it to 0 in base64
     if pos < 65 or pos > 90:
         Exception("Invalid character")
