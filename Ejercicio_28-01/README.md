@@ -6,3 +6,8 @@ Este cifrado es clasificado como un cifrado de desplazamiento, los cuales funcio
 Este cifrado recibe su nombre por Julio César, quien se cree que utilizaba esta técnica para poder proteger sus mensajes de índole militar. Este cifrado fue utilizado por muchas civilizaciones con diferentes variaciones de la cantidad de posiciones.
 ## Ventajas y vulnerabilidades
 A pesar de que en las épocas donde fueron utilizados originalmente eran relativamente seguros, actualmente estos algoritmos cuentan una seguridad muy baja por lo que no son utilizados. La principal ventaja de este algoritmo es su simpleza de implementación, y puede ser un poco difícil de desencriptar si no se esta utilizando ningún tipo de computadora.
+
+## Referencias
+``` 
+Khan Academy. (2023). Khanacademy.org. https://es.khanacademy.org/computing/computer-science/cryptography/ciphers/a/shift-cipher
+```
