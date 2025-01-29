@@ -16,12 +16,12 @@ def cypher_ascii_static(text, key):
     text_bin = ascii_to_bin.ascii_to_bin(text)
     # get the xor of the text and the key
     res = xor_bin.xor_bin(text_bin, key_bin)
-    return res, key
+    return res, key, key_bin, text_bin
     # devolver binario
 
 
 if __name__ == "__main__":
     text = "Hello!!"
     key = "exa"
-    res, newKey = cypher_ascii_static(text, key)
-    print('The cyphered text of "'+ text + '" with the key "'+ newKey + '" is', res)
+    res, newKey, key_bin, text_bin = cypher_ascii_static(text, key)
+    print(f'The cyphered text of "{text}" ({text_bin})\nwith the key "{newKey}" ({key_bin})\nis', res)

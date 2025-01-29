@@ -16,11 +16,11 @@ def cypher_ascii_dynamic(text, keylength):
     text_bin = ascii_to_bin.ascii_to_bin(text)
     # get the xor of the text and the key
     res = xor_bin.xor_bin(text_bin, key_bin)
-    return res, dynamic_key
+    return res, dynamic_key, text_bin, key_bin
 
 
 if __name__ == "__main__":
     text = "Hello!!"
     keyLen = 10
-    res, key = cypher_ascii_dynamic(text, keyLen)
-    print('The cyphered text of "'+ text + '" with the key "'+ key + '" is', res)
+    res, key, text_bin, key_bin = cypher_ascii_dynamic(text, keyLen)
+    print(f'The cyphered text of "{text}" ({text_bin})\nwith the key "{key}" ({key_bin})\nis', res)
