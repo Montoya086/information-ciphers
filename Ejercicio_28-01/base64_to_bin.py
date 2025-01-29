@@ -1,15 +1,20 @@
 import sys
 import complete_bin
 special = "0123456789+/"
+mayus = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+minus = "abcdefghijklmnopqrstuvwxyz"
 
 def base64_to_bin_char(base64):
     # get the ascii code of the character
-    pos = ord(base64)
-    pos -= 65 # set it to 0 in base64
+    pos = 0
     # buffer to store the binary representation
     if base64 in special: # handle the special characters
         pos = special.index(base64) + 52
-    if pos < 0 or pos > 63:
+    elif base64 in mayus: # handle the uppercase characters
+        pos = mayus.index(base64)
+    elif base64 in minus: # handle the lowercase characters
+        pos = minus.index(base64) + 26
+    elif pos < 0 or pos > 63:
         raise Exception("Invalid character", base64)
     binary = ""
     # convert the ascii code to binary
