@@ -1,26 +1,29 @@
-def bin_to_base64_char(binary):
-    # get the integer representation of the binary code
-    pos = 0
-    for i in range(len(binary)):
-        # get the integer representation of the binary code, converting it to decimal
-        pos += int(binary[i]) * 2**(len(binary)-i-1)
-    
-    pos += 65 # set it to 0 in base64
-    if pos < 65 or pos > 90:
-        Exception("Invalid character")
-    return chr(pos)
+chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/" # Base64 characters
 
 def bin_to_base64(binary):
-    # buffer to store the base64 representation
+    # remove spaces if they exist
+    binary = binary.replace(" ", "")
+    
+    # pad with zeros to make length multiple of 6
+    padding_length = (6 - len(binary) % 6) % 6
+    binary = binary + "0" * padding_length
+    
     base64 = ""
-    # split the binary representation into 8-bit chunks
-    chars = binary.split(" ")
-    for char in chars:
-        base64 += bin_to_base64_char(char)
-
-    return base64
+    # process 6 bits at a time
+    for i in range(0, len(binary), 6):
+        chunk = binary[i:i+6]
+        # convert binary chunk to decimal
+        val = 0
+        for bit in chunk:
+            val = (val << 1) | (int(bit))
+        #get corresponding base64 character
+        base64 += chars[val]
+    
+    #add padding if needed
+    padding = "=" * ((4 -len(base64) %4) %4)
+    return base64 + padding
 
 if __name__ == "__main__":
-    bin = "00000000 00000001"
+    bin = "01001000 01101111 01101100 01100001"
     res = bin_to_base64(bin)
     print('The base64 code of the binary representation "'+ bin + '" is', res)

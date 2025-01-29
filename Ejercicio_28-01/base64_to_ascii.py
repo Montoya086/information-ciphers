@@ -10,6 +10,6 @@ def base64_to_ascii(base64):
     return bin_to_ascii.bin_to_ascii(binary)
 
 if __name__ == "__main__":
-    arg = "SGVsbG8+/"
+    arg = "SG9sYQ=="
     res = base64_to_ascii(arg)
     print('The ascii code of the base64 representation "'+ arg + '" is', res)

@@ -17,7 +17,6 @@ def xor_bin(bin1, bin2):
         str_chars2 = str(chars2[i])
         part_res = ""
         for j in range(8):
-            print(str_chars1[j], str_chars2[j], xor(int(str_chars1[j]), int(str_chars2[j])))
             int_chars1 = int(str_chars1[j])
             int_chars2 = int(str_chars2[j])
             # perform the XOR operation
