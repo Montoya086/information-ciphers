@@ -4,7 +4,7 @@ from clean import clean_text
 
 KEY = 3
 
-alphabet = "abcdefghijklmnñopqrstuvwxyz"
+alphabet = "abcdefghijklmnñopqrstuvwxyz "
 
 def cypher(text, key):
     # convert text to lowercase
