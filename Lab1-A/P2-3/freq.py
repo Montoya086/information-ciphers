@@ -73,6 +73,11 @@ def generate_table(text, alphabet):
     prob = calc_prob(freq, total)
     return freq, prob
 
+def calculate_diff_table(freq):
+    diff = dict()
+    for letter in freq:
+        diff[letter] = abs(theorical_freq[letter] - freq[letter])
+    return diff
 
 def plot_freq(freq, title):
     # compare the theorical frequency with the frequency of the text
@@ -115,9 +120,13 @@ if __name__ == "__main__":
             sys.exit(1)
 
     freq, prob = generate_table(text, alphabet)
-    print("Frequency table:")
+    print("\nFrequency table:")
     print(tabulate.tabulate(freq.items(), headers=["Letter", "Frequency"]))
-    print("Probability table:")
+    print("\nProbability table:")
     print(tabulate.tabulate(prob.items(), headers=["Letter", "Probability"]))
+    print("\nDifference table:")
+    diff = calculate_diff_table(prob)
+    print(tabulate.tabulate(diff.items(), headers=["Letter", "Difference"]))
+
     if should_plot:
         plot_freq(prob, "Theorical vs Text frequency of the spanish language")
