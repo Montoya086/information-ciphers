@@ -1,5 +1,6 @@
 # vigenere cipher
 import sys
+from clean import clean_text
 
 alphabet = "abcdefghijklmnñopqrstuvwxyz"
 
@@ -56,9 +57,13 @@ if __name__ == "__main__":
     if mode == "-c":
         text = input("\nEnter the text to cypher: ")
         key = input("\nEnter the key: ")
+        key = clean_text(key, alphabet)
+        text = clean_text(text, alphabet)
         print("\n Cyphered text:", cypther(text, key))
     
     elif mode == "-d":
         text = input("\nEnter the text to decypher: ")
         key = input("\nEnter the key: ")
+        key = clean_text(key, alphabet)
+        text = clean_text(text, alphabet)
         print("\n Decyphered text:", decypher(text, key))
