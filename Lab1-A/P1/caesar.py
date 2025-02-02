@@ -38,8 +38,7 @@ def decypher(text, key):
     return result
 
 if __name__ == "__main__":
-    print(len(alphabet))
-    if len(sys.argv) != 2:
+    if len(sys.argv) != 2 or (sys.argv[1] != "-d" and sys.argv[1] != "-c"):
         print("Usage: python caesar.py <-d|-c> (d: decypher, c: cypher)")
         sys.exit(1)
     
@@ -47,9 +46,9 @@ if __name__ == "__main__":
 
     if mode == "-c":
         text = input("Enter the text to cypher: ")
-        print(cypher(text, KEY))
+        print("\n Cyphered text: ", cypher(text, KEY))
     elif mode == "-d":
         text = input("Enter the text to decypher: ")
-        print(decypher(text, KEY))
+        print("\n Decyphered text: ", decypher(text, KEY))
 
 
