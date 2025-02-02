@@ -1,5 +1,6 @@
 # afin cypher
 import sys
+from clean import clean_text
 
 alphabet = "abcdefghijklmnñopqrstuvwxyz"
 
@@ -80,7 +81,9 @@ if __name__ == "__main__":
 
     if mode == "-c":
         text = input("\nEnter the text to cypher: ")
+        text = clean_text(text, alphabet)
         print("\n Cyphered text:", cypher(text, a, b))
     elif mode == "-d":
         text = input("\nEnter the text to decypher: ")
+        text = clean_text(text, alphabet)
         print("\n Decyphered text:", decypher(text, a, b))

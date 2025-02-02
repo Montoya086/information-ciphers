@@ -1,5 +1,6 @@
 # Cifrado cesar
 import sys
+from clean import clean_text
 
 KEY = 3
 
@@ -46,9 +47,11 @@ if __name__ == "__main__":
 
     if mode == "-c":
         text = input("Enter the text to cypher: ")
+        text = clean_text(text, alphabet)
         print("\n Cyphered text: ", cypher(text, KEY))
     elif mode == "-d":
         text = input("Enter the text to decypher: ")
+        text = clean_text(text, alphabet)
         print("\n Decyphered text: ", decypher(text, KEY))
 
 
