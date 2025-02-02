@@ -1,7 +1,7 @@
 # vigenere cipher
 import sys
 
-alphabet = "abcdefghijklmnñopqrstuvwxyz "
+alphabet = "abcdefghijklmnñopqrstuvwxyz"
 
 vigenere_table = dict()
 #fill the vigenere table

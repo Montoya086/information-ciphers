@@ -2,7 +2,7 @@
 import sys
 from clean import clean_text
 
-alphabet = "abcdefghijklmnñopqrstuvwxyz "
+alphabet = "abcdefghijklmnñopqrstuvwxyz"
 
 # greatest common divisor
 def mcd(a, m):
