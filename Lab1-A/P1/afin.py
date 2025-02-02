@@ -46,13 +46,8 @@ def decypher(text, a, b):
     a_inv = mod_inverse(a, len(alphabet))
     # iterate over each letter in the text
     for letter in text:
-        # if the letter is in the alphabet
-        if letter in alphabet:
-            # add the padded letter to the result
-            res += alphabet[(a_inv *(alphabet.index(letter) -b)) % len(alphabet)]
-        else:
-            # if the letter is not in the alphabet, add it to the result
-            res += letter
+        # add the padded letter to the result
+        res += alphabet[(a_inv *(alphabet.index(letter) -b)) % len(alphabet)]
     return res
     
 

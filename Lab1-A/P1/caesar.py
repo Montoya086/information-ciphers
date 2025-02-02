@@ -13,13 +13,8 @@ def cypher(text, key):
     result = ""
     # iterate over each letter in the text
     for letter in text:
-        # if the letter is in the alphabet
-        if letter in alphabet:
-            # add the padded letter to the result
-            result += alphabet[(alphabet.index(letter) + key) % len(alphabet)]
-        else:
-            # if the letter is not in the alphabet, add it to the result
-            result += letter
+        # add the padded letter to the result
+        result += alphabet[(alphabet.index(letter) + key) % len(alphabet)]
     return result
 
 def decypher(text, key):
