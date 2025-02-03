@@ -6,6 +6,7 @@ Repository for "Cifrados de la información" course.
 
 - [Ejercicio de cifrados](https://github.com/Montoya086/information-ciphers/tree/main/Ejercicio_28-01)
 - [Laboratorio 1 Parte A]((https://github.com/Montoya086/information-ciphers/tree/main/Lab1-A))
+- [Laboratorio 1 Parte B]((https://github.com/Montoya086/information-ciphers/tree/main/Lab1-B))
 
 ## Technologies
 * [![Python][Python]][Python-url]
