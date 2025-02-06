@@ -1,7 +1,7 @@
 from utils import base64_to_bin, bin_to_ascii
 
 def base64_to_ascii(base64):
-    return bin_to_ascii.bin_to_ascii(base64_to_bin.base64_to_bin(base64))
+    return bin_to_ascii.bin_to_ascii(base64_to_bin.base64_to_bin(base64, True), True)
 
 if __name__ == "__main__":
     # Example 1

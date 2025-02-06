@@ -5,7 +5,7 @@ def bits_to_ascii(bits):
     bits = bits.replace(" ", "")
     spaced_bits = ' '.join(bits[i:i+8] for i in range(0, len(bits), 8))
 
-    return bin_to_ascii.bin_to_ascii(spaced_bits)
+    return bin_to_ascii.bin_to_ascii(spaced_bits, True)
 
 if __name__ == "__main__":
     # Example 1

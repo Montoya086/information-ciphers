@@ -1,7 +1,7 @@
 from utils import ascii_to_bin
 
 def ascii_to_bits (ascii):
-    return ascii_to_bin.ascii_to_bin(ascii).replace(" ", "")
+    return ascii_to_bin.ascii_to_bin(ascii, True).replace(" ", "")
 
 if __name__ == "__main__":
     # Example 1
