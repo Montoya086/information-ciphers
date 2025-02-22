@@ -7,7 +7,7 @@ def ascii_xor_ascii (ascii, key):
         key = dynamic_key_gen.complete_key(key, len(ascii))
     ascii_bin = ascii_to_bin.ascii_to_bin(ascii, True)
     key_bin = ascii_to_bin.ascii_to_bin(key, True)
-    xor = xor_bin.xor_bin(ascii_bin, key_bin, True)
+    xor = xor_bin.xor_bin(ascii_bin, key_bin, True).strip()
     return bin_to_ascii.bin_to_ascii(xor, True)
 
 if __name__ == "__main__":
