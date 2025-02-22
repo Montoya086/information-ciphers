@@ -7,8 +7,8 @@ def generate_key(length=16, seed=None):
         seed = os.urandom(length)
     # set the seed for the random number generator
     random.seed(seed)
-    # generate a random number key using only the digits
-    key = ''.join(random.choices(string.digits, k=length))
+    # generate a random number key using all the characters
+    key = ''.join(random.choices(string.ascii_letters + string.digits, k=length))
     return key
 
 if __name__ == "__main__":
