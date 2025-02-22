@@ -7,11 +7,11 @@ def ascii_xor_ascii (ascii, key, verbose=False):
     cyphered = bin_to_ascii.bin_to_ascii(xor, verbose)
     return cyphered
 
-def cypher(plain_text, keystream, verbose=False):
-    key = generate_key(len(plain_text), keystream)
+def cypher(plain_text, nonce, verbose=False):
+    key = generate_key(len(plain_text), nonce)
     return ascii_xor_ascii(plain_text, key, verbose)
 
-def decypher(cyphered, keystream, verbose=False):
-    key = generate_key(len(cyphered), keystream)
+def decypher(cyphered, nonce, verbose=False):
+    key = generate_key(len(cyphered), nonce)
     return ascii_xor_ascii(cyphered, key, verbose)
 
