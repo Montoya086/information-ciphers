@@ -13,6 +13,51 @@ Por defecto, el texto a cifrar es "Hello world!!!" y el keystream es "1234567890
 python main.test.py
 ```
 
+## Ejemplos de uso
+
+### Ejemplo 1
+
+Input:
+```bash
+python main.py "Hello world" "1234567890"                        
+```
+Output:
+```bash
+cyphered text: =U8e@
+decyphered text: Hello world
+```
+
+### Ejemplo 2
+
+Input:
+```bash
+python main.py "El patito" "aabs123"   
+```
+Output:
+```bash
+cyphered text: 
+@R< 
+decyphered text: El patito
+```
+
+### Ejemplo 3
+
+Input:
+```bash
+python main.py "El gato dice miau" "elperro12"   
+```
+Output:
+```bash
+cyphered text: 'n
+                 +6K17*YZ?
+                          $
+decyphered text: El gato dice miau
+```
+
+
+
+
+
 ## Preguntas
 
 1. ¿Qué sucede cuando cambias la clave utilizada para generar el keystream?
