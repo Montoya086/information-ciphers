@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  server:
+    build: .
+    ports:
+      - "9876:9876"
+    networks:
+      - socket-network
+    healthcheck:
+      test: ["CMD", "nc", "-z", "localhost", "9876"]
+      interval: 5s
+      timeout: 3s
+      retries: 3
+    tty: true
+    stdin_open: true
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+networks:
+  socket-network:
+    driver: bridge 
